@@ -1,0 +1,73 @@
+# ==============================
+# GLOBAL
+# ==============================
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# ==============================
+# PYTHON / DJANGO (BACKEND)
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Django specific
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Django secret settings
+.env
+.env.*
+
+# Migrations (optional – uncomment if you want to ignore)
+# **/migrations/*.py
+# !**/migrations/__init__.py
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# NODE / REACT / VITE (FRONTEND)
+# ==============================
+node_modules/
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==============================
+# TYPESCRIPT
+# ==============================
+*.tsbuildinfo
+
+# ==============================
+# ESLINT
+# ==============================
+.eslintcache
+
+# ==============================
+# SYSTEM FILES
+# ==============================
+*.lock
