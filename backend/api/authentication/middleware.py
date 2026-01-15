@@ -17,6 +17,10 @@ class CustomAuthMiddleware(authentication.BaseAuthentication):
         try:
             prefix, token = auth_header.split(' ')
             
+            print(prefix)
+            print(token)
+
+            
             if prefix.lower() != 'bearer':
                 raise exceptions.AuthenticationFailed('You are not authorized!')
             

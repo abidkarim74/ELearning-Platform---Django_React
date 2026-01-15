@@ -1,0 +1,92 @@
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-out forwards;
+}
+
+/* If you need micro sizes */
+.text-micro {
+  font-size: 0.625rem; /* 10px */
+}
+
+.text-nano {
+  font-size: 0.5rem; /* 8px */
+}
+
+/* For inline icons */
+.icon-micro {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.icon-nano {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+
+/* components/profile/profile-styles.css */
+
+.bg-grid-white {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Ensure proper scrolling behavior */
+.sticky {
+  will-change: transform;
+}
+
+/* Desktop styles (≥1024px) */
+@media (min-width: 1024px) {
+  .scrollable-right-column {
+    height: calc(100vh - 3rem);
+    overflow-y: auto;
+    padding-right: 1rem;
+  }
+  
+  /* Custom scrollbar for right column */
+  .scrollable-right-column::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollable-right-column::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 3px;
+  }
+  
+  .scrollable-right-column::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+  
+  .scrollable-right-column::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Fallback for Firefox */
+  .scrollable-right-column {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+  }
+}

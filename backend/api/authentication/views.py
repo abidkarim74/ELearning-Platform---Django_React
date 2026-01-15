@@ -123,10 +123,10 @@ class RefreshTokenAPIViewh(APIView):
         
         try:
             payload = jwt.decode(refresh_token, settings.REFRESH_TOKEN_KEY, algorithms=['HS256'])
-            print("fuck")
+            print(payload)
             user = User.objects.get(id=payload['id'])
             access_token = generate_access_token(user)
-            
+                        
             return Response({'access_token': access_token})
         
         except jwt.ExpiredSignatureError:

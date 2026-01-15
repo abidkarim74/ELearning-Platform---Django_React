@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (max-width: 768px) {
+  .animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+
+.bg-grid-light {
+  background-image: 
+    linear-gradient(to right, rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Compact layout for one-page height */
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optimize for one screen */
+.max-w-md {
+  max-width: 28rem;
+}
+
+/* Responsive padding */
+@media (max-height: 700px) {
+  .p-8 {
+    padding: 1.5rem;
+  }
+  
+  .mb-10 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .space-y-6 > * + * {
+    margin-top: 1rem;
+  }
+}
